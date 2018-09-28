@@ -1,0 +1,14 @@
+{
+  "apps" : [{
+    "name"        : "ng5_app",
+    "script"      : "dist/server.js",
+    "node_args" : ["--expose-gc","--max-old-space-size=512"],
+    "args"        : ["--log_dir=/var/tmp"],
+    "watch"       : true,
+    "merge_logs"  : true,
+    "instances"  : 1,
+    "exec_mode"  : "cluster_mode",
+    "error_file" : "/var/tmp/child-err.log",
+    "out_file"   : "/var/tmp/child-out.log"
+  }]
+}
